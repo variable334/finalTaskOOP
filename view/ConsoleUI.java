@@ -4,7 +4,7 @@ import presenter.presentContact.*;
 import presenter.presentNote.*;
 
 
-import javax.net.ssl.SSLContext;
+
 import java.io.IOException;
 import java.time.DateTimeException;
 import java.time.LocalDateTime;

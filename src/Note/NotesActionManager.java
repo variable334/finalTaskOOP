@@ -45,13 +45,10 @@ public class NotesActionManager implements ActionWithNotes, SortByIdentifier,Sor
     @Override
     public void  readingSingleNotes(String identifier) {
 
-            if (notes.contains(identifier)) {
+
                 Note note = searchNote(identifier);
                 System.out.println(note);
 
-            } else {
-                System.out.println("Такого идентификатора нету");
-            }
 
 
     }

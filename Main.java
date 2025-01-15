@@ -41,14 +41,14 @@ public class Main {
 
 
         NoteBookContact noteBookContact = new NoteBookContact(actionWithContact,
-                operationWithContact,changesContact,sortedByName,searchContact);
+                operationWithContact, changesContact, sortedByName, searchContact);
 
-        NoteBookNote noteBookNote = new NoteBookNote(actionWithNotes,changesNotes,
-                operationWithNote, sortByDate,sortByIdentifier,searchNotes);
+        NoteBookNote noteBookNote = new NoteBookNote(actionWithNotes, changesNotes,
+                operationWithNote, sortByDate, sortByIdentifier, searchNotes);
 
 
-        PresenterContact presenterContact= new PresenterContact(actionWithContact,changesContact,
-                operationWithContact,sortedByName,searchContact);
+        PresenterContact presenterContact = new PresenterContact(actionWithContact, changesContact,
+                operationWithContact, sortedByName, searchContact);
 
 
         ChangeAndDeleteContact changeAndDeleteContact = presenterContact;
@@ -56,9 +56,9 @@ public class Main {
         SavingAndLoadingContact savingAndLoadingContact = presenterContact;
         SortContact sortContact = presenterContact;
 
-        PresenterNote presenterNote = new PresenterNote(actionWithNotes,changesNotes,
-                operationWithNote,sortByDate,
-                sortByIdentifier,searchNotes);
+        PresenterNote presenterNote = new PresenterNote(actionWithNotes, changesNotes,
+                operationWithNote, sortByDate,
+                sortByIdentifier, searchNotes);
 
         ChangesAndDeleteNote changesAndDeleteNote = presenterNote;
         WritingAndReadingNote writingAndReadingNote = presenterNote;
@@ -66,11 +66,9 @@ public class Main {
         SortNotes sortNotes = presenterNote;
 
 
-
-
-        ConsoleUI consoleUI = new ConsoleUI(changeAndDeleteContact,readingAndWritingContact,
-                savingAndLoadingContact,sortContact,changesAndDeleteNote,
-                writingAndReadingNote,savingAndLoadingNote,sortNotes);
+        ConsoleUI consoleUI = new ConsoleUI(changeAndDeleteContact, readingAndWritingContact,
+                savingAndLoadingContact, sortContact, changesAndDeleteNote,
+                writingAndReadingNote, savingAndLoadingNote, sortNotes);
 
         consoleUI.run();
 

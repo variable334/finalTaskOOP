@@ -7,10 +7,7 @@ import src.NoteBook.NoteBookContact;
 
 public class PresenterContact implements ReadingAndWritingContact, ChangeAndDeleteContact, SavingAndLoadingContact, SortContact {
 
-//    private ActionWithContact actionWithContact;
-//    private ChangesContact changesContact;
-//    private OperationWithContact operationWithContact;
-//    private SortedByName sortedByName;
+
     private NoteBookContact noteBookContact;
 
 
@@ -18,10 +15,7 @@ public class PresenterContact implements ReadingAndWritingContact, ChangeAndDele
     public PresenterContact(ActionWithContact actionWithContact,ChangesContact changesContact,
                             OperationWithContact operationWithContact,SortedByName sortedByName,SearchContact searchContact) {
 
-//        this.actionWithContact = actionWithContact;
-//        this.changesContact = changesContact;
-//        this.operationWithContact = operationWithContact;
-//        this.sortedByName = sortedByName;
+
         this.noteBookContact = new NoteBookContact(actionWithContact,
                 operationWithContact,changesContact,sortedByName,searchContact);
 
@@ -53,7 +47,6 @@ public class PresenterContact implements ReadingAndWritingContact, ChangeAndDele
         return noteBookContact.searchContact(name);
     }
 
-
     @Override
     public void amendContact(String ex, String change) {
 //        changesContact.changesContact(ex,change);
@@ -65,7 +58,6 @@ public class PresenterContact implements ReadingAndWritingContact, ChangeAndDele
 //        changesContact.removeContact(name);
         noteBookContact.removeContact(name);
     }
-
 
     @Override
     public void saving(String name) {
@@ -83,7 +75,6 @@ public class PresenterContact implements ReadingAndWritingContact, ChangeAndDele
     public void viewLoad(String name) {
         noteBookContact.viewLoadContact(name);
     }
-
 
     @Override
     public void triageByName() {

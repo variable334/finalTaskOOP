@@ -7,7 +7,7 @@ public class ViewingRecord extends Command {
 
     public ViewingRecord(ConsoleUI consoleUI) {
         super(consoleUI);
-        descript = "показать записи. ";
+        descript = "Показать записи. ";
     }
 
     @Override

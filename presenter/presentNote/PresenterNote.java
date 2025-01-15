@@ -11,11 +11,7 @@ import java.time.LocalDateTime;
 
 public class PresenterNote implements WritingAndReadingNote,ChangesAndDeleteNote,SavingAndLoadingNote,SortNotes {
 
-//    private ActionWithNotes actionWithNotes;
-//    private OperationWithNote operationWithNote;
-//    private ChangesNotes changesNotes;
-//    private SortByDate sortByDate;
-//    private SortByIdentifier sortByIdentifier;
+
     private NoteBookNote noteBookNote;
 
 
@@ -24,13 +20,8 @@ public class PresenterNote implements WritingAndReadingNote,ChangesAndDeleteNote
                          OperationWithNote operationWithNote, SortByDate sortByDate,
                          SortByIdentifier sortByIdentifier,SearchNotes searchNotes) {
 
-//        this.actionWithNotes = actionWithNotes;
-//        this.changesNotes = changesNotes;
-//        this.operationWithNote = operationWithNote;
-//        this.sortByDate = sortByDate;
-//        this.sortByIdentifier = sortByIdentifier;
-        this.noteBookNote = new NoteBookNote(actionWithNotes,changesNotes,operationWithNote,sortByDate,sortByIdentifier,searchNotes);
 
+        this.noteBookNote = new NoteBookNote(actionWithNotes,changesNotes,operationWithNote,sortByDate,sortByIdentifier,searchNotes);
 
     }
 
@@ -54,7 +45,6 @@ public class PresenterNote implements WritingAndReadingNote,ChangesAndDeleteNote
         noteBookNote.readingSingleNote(name);
     }
 
-
     @Override
     public void viewingSingleNoteDate(LocalDateTime dateTime) {
 //        actionWithNotes.readingSingleNoteDate(dateTime);
@@ -70,7 +60,6 @@ public class PresenterNote implements WritingAndReadingNote,ChangesAndDeleteNote
     public Note searchNoteDataTime(LocalDateTime dateTime) {
         return noteBookNote.searchNotesDataTime(dateTime);
     }
-
 
     @Override
     public void amendBysLocalDateNote(String ex, LocalDateTime change) {
@@ -90,7 +79,6 @@ public class PresenterNote implements WritingAndReadingNote,ChangesAndDeleteNote
         noteBookNote.removeNote(identifier);
     }
 
-
     @Override
     public void save(String name) {
 //        operationWithNote.save(name);
@@ -107,7 +95,6 @@ public class PresenterNote implements WritingAndReadingNote,ChangesAndDeleteNote
     public void viewLoad(String name) {
         noteBookNote.viewLoad(name);
     }
-
 
     @Override
     public void sortByTime() {

@@ -31,11 +31,10 @@ public class NoteBookNote {
 
     }
 
-
-
     public void FindRecordByDate(LocalDateTime dateTime){
         actionWithNotes.readingSingleNoteDate(dateTime);
     }
+
     public Note searchNotesDataTime(LocalDateTime dateTime){
         return searchNotes.searchNoteDate(dateTime);
     }
@@ -48,11 +47,11 @@ public class NoteBookNote {
        return searchNotes.searchNote(identifier);
     }
 
-
     public void readingSingleNote(String identifier){
         actionWithNotes.readingSingleNotes(identifier);
 
     }
+
     public void readingSingleNoteDataTime(LocalDateTime dateTime){
         actionWithNotes.readingSingleNoteDate(dateTime);
     }
